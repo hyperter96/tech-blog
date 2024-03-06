@@ -46,3 +46,47 @@ nodes:
 - role: worker
 EOF
 ```
+
+注意：使用两个工作节点，因此 nginx 部署中的每个 pod 都被安排到一个单独的节点。
+
+创建用于第二个集群的 Docker 网络：
+
+```bash
+docker network create -d=bridge \
+    -o "com.docker.network.bridge.enable_ip_masquerade=true" \
+    --attachable \
+    "kind2"
+```
+
+设置 `KIND_EXPERIMENTAL_DOCKER_NETWORK` 环境变量，让 `kind` 使用此网络而不是默认的 `kind` 网络：
+
+```bash
+export KIND_EXPERIMENTAL_DOCKER_NETWORK=kind2
+```
+
+创建第二个集群，
+
+```bash
+$ kind create cluster --config - <<EOF
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  disableDefaultCNI: true   # do not install kindnet
+  kubeProxyMode: none       # do not run kube-proxy
+  podSubnet: "10.242.0.0/16"
+  serviceSubnet: "10.12.0.0/16"
+name: cilium2
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+EOF
+```
+
+删除环境变量，以便将来的集群安装使用默认类型的 Docker 网络。
+
+```bash
+unset KIND_EXPERIMENTAL_DOCKER_NETWORK
+```
+
+您现在有两个不同网络的 k8s 集群，且暂时无法相互通信。
