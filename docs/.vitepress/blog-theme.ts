@@ -52,7 +52,7 @@ const blogTheme = getThemeConfig({
       des: '你的指尖用于改变世界的力量',
       avatar:
         'https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/selfie.jpeg',
-      url: 'https://hyperter96.github.io/tech-blog',
+      url: 'https://hyperter96.github.io/tech-blog/',
     }
   ],
 
