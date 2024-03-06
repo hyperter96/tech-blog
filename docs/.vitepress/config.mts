@@ -39,7 +39,7 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '首页', link: '/' },
+      { text: '首页', link: '/tech-blog' },
       { text: '关于作者', link: 'https://sugarat.top/aboutme.html' }
     ],
     socialLinks: [
