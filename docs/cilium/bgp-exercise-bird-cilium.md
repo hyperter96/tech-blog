@@ -1,5 +1,6 @@
 ---
 top: 1
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/cilium-bgp-demo.svg
 tag:
   - Cilium
   - 网络
@@ -17,7 +18,7 @@ sticky: 1
 3. 使用 Cilium IP 池将外部 IP 分配给服务。
 4. 使用 BGP CP 通告 nginx 服务。
 
-![](https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/cilium-bgp-demo.svg)
+![](../assets/images/cilium-bgp-demo.svg)
 
 ## 前置条件
 
