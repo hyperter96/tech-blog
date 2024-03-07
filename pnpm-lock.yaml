@@ -14,6 +14,9 @@ dependencies:
   element-plus:
     specifier: ^2.5.3
     version: 2.6.0(vue@3.4.15)
+  vitepress-plugin-comment-with-giscus:
+    specifier: ^1.1.12
+    version: 1.1.12(vue@3.4.15)
   vue:
     specifier: 3.4.15
     version: 3.4.15(typescript@5.3.3)
@@ -2138,6 +2141,14 @@ packages:
     resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==}
     dependencies:
       dayjs: 1.11.10
+    dev: false
+
+  /vitepress-plugin-comment-with-giscus@1.1.12(vue@3.4.15):
+    resolution: {integrity: sha512-kUN0NraWXG27BnArVCveZUEpWahT5tT+DFLXRcnuoAtiYfu8qJ/lo/mdzjdSuqFMCWVHjCEx6vVYbVMQKPnRHQ==}
+    dependencies:
+      '@giscus/vue': 2.4.0(vue@3.4.15)
+    transitivePeerDependencies:
+      - vue
     dev: false
 
   /vitepress-plugin-mermaid@2.0.13(mermaid@10.9.0)(vitepress@1.0.0-rc.40):
