@@ -1,7 +1,7 @@
 ---
 sidebar: false
 title: 关于自己
-date: 2023-11-13
+date: 2021-11-13
 cover: https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/lighthouse.jpg
 tags:
  - 其它
