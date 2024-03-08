@@ -14,25 +14,25 @@ const playlist = [
   {
     name: '安静思考（纯音乐）',
     author: '龙小彤',
-    file: '/tech-blog/mp3/安静思考.mp3',
+    file: 'https://hyper2t.github.io/mp3/安静思考.mp3',
     hide: false,
   },
   {
     name: '将故事写成我们（钢琴曲）',
     author: '林俊杰',
-    file: '/tech-blog/mp3/将故事写成我们.mp3',
+    file: 'https://hyper2t.github.io/mp3/将故事写成我们.mp3',
     hide: false,
   },
   {
     name: '瞬间的永恒（纯音乐）',
     author: '赵海洋',
-    file: '/tech-blog/mp3/瞬间的永恒.mp3',
+    file: 'https://hyper2t.github.io/mp3/瞬间的永恒.mp3',
     hide: false,
   },
   {
     name: '点星',
     author: 'MT1990',
-    file: '/tech-blog/mp3/点星MT1990.mp3',
+    file: 'https://hyper2t.github.io/mp3/点星MT1990.mp3',
     hide: false,
   }
 ]
