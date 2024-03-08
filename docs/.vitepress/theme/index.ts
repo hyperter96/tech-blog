@@ -12,6 +12,12 @@ import 'vitepress-plugin-music/lib/css/index.css'
 
 const playlist = [
   {
+    name: '一起看星星（治愈曲）',
+    author: '杜贴心',
+    file: 'https://hyper2t.github.io/mp3/一起看星星.mp3',
+    hide: false,
+  },
+  {
     name: '安静思考（纯音乐）',
     author: '龙小彤',
     file: 'https://hyper2t.github.io/mp3/安静思考.mp3',

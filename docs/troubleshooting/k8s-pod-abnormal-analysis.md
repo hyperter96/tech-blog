@@ -1,4 +1,5 @@
 ---
+sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/k8s-2.jpg
 categories: "kubernetes"
 date: 2023-05-06 11:45:56

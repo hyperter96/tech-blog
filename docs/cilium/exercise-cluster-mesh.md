@@ -1,4 +1,5 @@
 ---
+sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/cluster-mesh.png
 tag:
   - Cilium
@@ -6,6 +7,9 @@ tag:
   - cni
   - kubernetes
 sticky: 1
+prev:
+  text: 'Cilium系列一：使用bird和cilium部署BGP模式的k8s集群'
+  link: '/cilium/bgp-exercise-bird-cilium'
 ---
 
 # Cilium系列二：Cilium在集群网格Cluster Mesh中的实践

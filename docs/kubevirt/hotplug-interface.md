@@ -1,10 +1,14 @@
 ---
+sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/background2.jpg
 tag:
   - Kubevirt
   - 虚拟机
   - kubernetes
 sticky: 1
+prev:
+  text: 'Kubevirt系列一：虚拟机CentOS 7部署实践'
+  link: '/kubevirt/quick-deploy-centos7'
 ---
 
 # Kubevirt系列二：虚拟机网卡热插拔

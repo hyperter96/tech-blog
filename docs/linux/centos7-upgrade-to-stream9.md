@@ -1,4 +1,5 @@
 ---
+sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/algorithm-1.jpeg
 tag:
   - 虚拟机
