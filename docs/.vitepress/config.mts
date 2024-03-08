@@ -16,7 +16,7 @@ export default defineConfig({
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/tech-blog/favicon.ico' }]
   ],
   // markdown: {
   //   lineNumbers: true

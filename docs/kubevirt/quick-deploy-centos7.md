@@ -7,7 +7,7 @@ tag:
 sticky: 1
 ---
 
-# Kubevirt系列一：虚拟机CentOS7部署实践
+# Kubevirt系列一：虚拟机CentOS 7部署实践
 
 俗话说，实践是检验真理的唯一标准，不妨让我们尝试用kubeVirt部署一台属于自己的虚拟机吧~
 

@@ -1,10 +1,11 @@
 ---
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/algorithm-1.jpeg
 tag:
   - 虚拟机
   - linux
 ---
 
-# CentOS 7 升级至 CentOS Stream 9 操作
+# CentOS 7 升级至 CentOS Stream 9 操作教程
 
 本操作教程仓库地址：[https://github.com/hyperter96/OhMyStream9](https://github.com/hyperter96/OhMyStream9)，所有Shell脚本在`scripts`目录下。
 

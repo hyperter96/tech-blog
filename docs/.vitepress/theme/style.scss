@@ -1,3 +1,20 @@
+/* 应用在首页index.md内和关于页about.md内 */
+// .Layout:has(.VPHome) {
+//   background: url(./assets/bg2.webp)
+//     no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   user-select: none;
+//   transition: 0.5s ease-in-out;
+// }
+// .dark .Layout:has(.VPHome) {
+//   background: url(./assets/bg2.webp)
+//     no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   user-select: none;
+//   transition: 0.5s ease-in-out;
+// }
 .VPHome {
   // 自定义首页背景图
   &::before {
@@ -11,4 +28,34 @@
     rgba(var(--bg-gradient-home), 1) 0%,
     rgba(var(--bg-gradient-home), 0.5) 100%
   );
+}
+
+
+@media (min-width: 960px) {
+  .VPDoc {
+    padding: 32px 0 0 !important;
+  }
+  
+  .VPNavBar .content {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+.VPNavBar {
+  padding-right: 20px !important;
+}
+.dark .VPDoc {
+  background-color: rgb(10, 10, 11);
+  background-image: url("/grid.svg");
+}
+.VPNavBar .container {
+  margin: unset;
+  max-width: unset;
+}
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+.aside {
+  max-width: 400px !important;
+  padding-left: 50px !important;
 }
