@@ -57,7 +57,7 @@ func main()  {
 - P代表处理器，每一个运行的M（线程）都必须绑定一个P（处理器）
 - G代表 goroutine，每次使用 go 关键字的时候，都会创建一个G对象
 
-![GMP调度模型](../../assets/images/gmp.png "图3：GMP调度模型")
+![GMP调度模型](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/gmp.png "图3：GMP调度模型")
 
 当前有两个P，各自绑定了一个M，每个P上挂了一个本地 goroutine 队列，也有一个全局 goroutine 队列。流程：
 

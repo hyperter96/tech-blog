@@ -27,11 +27,11 @@ sticky: 1
 
 切片的容量指的是**数组中的头指针指向的位置至数组最后一位的长度**。举个例子，现在有一个数组 `a := [8]int {0,1,2,3,4,5,6,7}`，切片 `s1 := a[:5]`，相应示意图如下
 
-![切片 s1 和底层数组 a](../../assets/images/slice1.png "图1: 切片 s1 和底层数组 a")
+![切片 s1 和底层数组 a](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/slice1.png "图1: 切片 s1 和底层数组 a")
 
 切片 `s2 := a[3:6]`，相应示意图如下：
 
-![切片 s2 和底层数组 a](../../assets/images/slice2.png "图2：切片 s2 和底层数组 a")
+![切片 s2 和底层数组 a](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/slice2.png "图2：切片 s2 和底层数组 a")
 
 ### 切片的扩容
 
