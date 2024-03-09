@@ -101,7 +101,7 @@ chmod +x /usr/local/bin/virtctl
 
 下载 CentOS7 镜像，选择阿里云镜像站 [https://mirrors.aliyun.com/centos/7/isos/x86_64/](https://mirrors.aliyun.com/centos/7/isos/x86_64/)
 
-![](../assets/images/aliyun-image-source.png){ loading=lazy }
+![](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/aliyun-image-source.png){ loading=lazy }
 
 ### 上传镜像文件
 
@@ -288,4 +288,4 @@ virtctl start centos7
 
 centOS7 虚拟机启动正常。
 
-![](../assets/images/centos7-start.png){ loading=lazy }
+![](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/centos7-start.png){ loading=lazy }
