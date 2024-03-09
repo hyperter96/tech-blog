@@ -1,6 +1,7 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/aliyun-image-source.png
+date: 2023-10-01
 tag:
   - Kubevirt
   - 虚拟机
@@ -8,7 +9,7 @@ tag:
 sticky: 1
 next:
   text: 'Kubevirt系列二：虚拟机网卡热插拔'
-  link: '/kubevirt/hotplug-interface'
+  link: '/posts/kubevirt/hotplug-interface'
 ---
 
 # Kubevirt系列一：虚拟机CentOS 7部署实践

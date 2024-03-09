@@ -1,11 +1,16 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/kubevela-cover1-application.png
+date: 2023-09-09
+author: 意琦行
 tag:
   - Kubevela
   - 应用交付
   - kubernetes
 sticky: 1
+next:
+  text: 'Kubevela系列二：Application Controller 源码分析(上)'
+  link: '/posts/kubevela/application-controller-source-code-analysis-1'
 ---
 
 # Kubevela系列一：初识 KubeVela，基于 OAM 模型的应用交付平台
@@ -25,7 +30,7 @@ KubeVela 是基础设施无关的、可编程的，但最重要的是： 它是�
 一句话总结：**KubeVela 是一个以应用为中心的软件交付平台。**
 
 :::info 
-KubeVela 将应用抽象成了 Application 对象，这也是 KubeVela 中的核心对象，后续会介绍到。
+KubeVela 将应用抽象成了 `Application` 对象，这也是 KubeVela 中的核心对象，后续会介绍到。
 :::
 
 ### KubeVela 解决了什么问题
@@ -58,7 +63,7 @@ KubeVela 将应用抽象成了 Application 对象，这也是 KubeVela 中的核
 
 ## Application
 
-KubeVela 中最核心的就是这个 Application 对象。
+KubeVela 中最核心的就是这个 `Application` 对象。
 
 ### 概念
 
@@ -68,7 +73,7 @@ KubeVela 围绕着云原生应用交付和管理场景展开，背后的应用�
 前面有提到：**KubeVela 是一个以应用为中心的软件交付平台**。因此应用是 KubeVela 中最核心的对象。
 :::
 
-基于 OAM 模型，KubeVela将应用抽象成了一个 Application 对象，中文翻译可以叫做：应用部署计划。
+基于 OAM 模型，KubeVela将应用抽象成了一个 `Application` 对象，中文翻译可以叫做：应用部署计划。
 
 :::tip
 应用部署计划这个词可以说是非常贴切了。
@@ -82,7 +87,7 @@ KubeVela 围绕着云原生应用交付和管理场景展开，背后的应用�
 - **工作流步骤（WorkflowStep）**: 工作流由多个步骤组成，允许用户自定义应用在某个环境的交付过程。典型的工作流步骤包括人工审核、数据传递、多集群发布、通知等。
 **KubeVela 的核心是将应用部署所需的所有组件和各项运维动作，描述为一个统一的、与基础设施无关的“部署计划”，进而实现在混合环境中标准化和高效率的应用交付。**这使得最终用户无需关注底层细节，就可以使用丰富的扩展能力，并基于统一的概念自助式操作。
 
-就像下图这样，一个完整的 Application 对象需要包含这 4 部分内容：
+就像下图这样，一个完整的 `Application` 对象需要包含这 4 部分内容：
 
 ![图片](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/kubevela-application-2.png)
 
@@ -92,12 +97,12 @@ KubeVela 围绕着云原生应用交付和管理场景展开，背后的应用�
 
 ![图片](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/kubevela-application-arch.png)
 
-也就是说 Application 对象主要是对各个模块进行组合，真正的功能实现由各个模块定义来提供。
+也就是说 `Application` 对象主要是对各个模块进行组合，真正的功能实现由各个模块定义来提供。
 
-同时 KubeVela 提供了 Application Controller 来维护 Application 对象状态，这个也是核心之一，挖个坑，后续写一篇文章分析一下具体工作流程。
+同时 KubeVela 提供了 Application Controller 来维护 `Application` 对象状态，这个也是核心之一，挖个坑，后续写一篇文章分析一下具体工作流程。
 
 :::tip
-用户将一个 Application 对象交给 KubeVela 之后发生了什么。
+用户将一个 `Application` 对象交给 KubeVela 之后发生了什么。
 :::
 
 ## 插件机制(模块定义)
@@ -108,7 +113,7 @@ KubeVela 的灵活性主要由**插件机制**提供，KubeVela 中称其为 `XD
 存在不同叫法，一般插件、组件、模块定义都是一个东西。
 :::
 
-前文提到 Application 对象中引用的几部分内容都是作为一个模块来实现的：
+前文提到 `Application` 对象中引用的几部分内容都是作为一个模块来实现的：
 
 - `Component`
 - `Trait`
@@ -132,7 +137,7 @@ KubeVela 的灵活性主要由**插件机制**提供，KubeVela 中称其为 `XD
 
 在 这里 可以找到现有的插件列表。
 
-在 KubeVela 中插件机制主要为了向终端用户屏蔽底层的复杂度，就向这样：用户只需要提供少量数据，经过插件处理后即可生成完整信息。
+在 KubeVela 中插件机制主要为了向终端用户屏蔽底层的复杂度，就像这样：用户只需要提供少量数据，经过插件处理后即可生成完整信息。
 
 ![图片](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/kubevela-xdefinition-usage.png)
 
@@ -140,7 +145,7 @@ KubeVela 的灵活性主要由**插件机制**提供，KubeVela 中称其为 `XD
 
 插件在 KubeVela 中具体表现为一个叫做 `XDefinition` 的 CRD，因此定义插件主要是实现一个 `XDefinition` 的 CRD。
 
-以下内容定义了一个 `component` 类型的，名为 `myraw` 的插件，借助该 component 用户可以将原生 k8s 对象作为 Application 的一部分。
+以下内容定义了一个 `component` 类型的，名为 `myraw` 的插件，借助该 `component` 用户可以将原生 k8s 对象作为 Application 的一部分。
 
 核心为 `spec.schematic.cue` 部分
 
@@ -233,7 +238,7 @@ vela-app    demo             myraw                      running        healthy  
 
 [UI 扩展 | KubeVela](http://kubevela.net/zh/docs/reference/ui-schema)
 
-在定义 `XDefinition` 之后 KubeVela 会自动根据内容生成 json schema，UI 界面则会自动根据该 Schema 内容进行展示。
+在定义 `XDefinition` 之后 KubeVela 会自动根据内容生成 `json schema`，UI 界面则会自动根据该 Schema 内容进行展示。
 
 如果自动生成的不够完美，还可以进行自定义。
 
@@ -261,7 +266,7 @@ KubeVela 中怎么实现：
 
 ## 小结
 
-本文主要对 KubeVela 做了一个简要说明，核心部分为基于 OAM 模型的 `Application` 对象抽象，以及基于 CUE 模板引擎 + CRD 注册模式的插件系统(模块定义)。
+本文主要对 KubeVela 做了一个简要说明，核心部分为基于 OAM 模型的 `Application` 对象抽象，以及基于 `CUE 模板引擎 + CRD` 注册模式的插件系统(模块定义)。
 
 - **KubeVela 是什么**：KubeVela 是一个以应用为中心的软件交付平台。
 - **KubeVela 解决的问题**：云原生社区能力"无限",但是传统 PaaS 无法快速将这些能力接入进来。
@@ -273,5 +278,5 @@ KubeVela 中怎么实现：
 
 - **动态注册**：KubeVela 中的应用程序由各种模块化组件组成。Kubernetes 生态系统的功能可以随时通过 Kubernetes CRD 注册机制作为新的工作负载类型或特征添加到 KubeVela 中。
 - **简单但可扩展的抽象机制**：KubeVela 引入了一个模板引擎（支持 CUE ），用于从 Kubernetes 资源中提取面向用户的模式。KubeVela 提供了一组内置的抽象作为起点，平台构建者可以随时自由地对其进行修改。抽象更改将在运行时生效，无需重新编译或重新部署 KubeVela。
-- **自动生成 UI**：自动根据模块内容生成 json schema，UI 界面则会自动根据该 Schema 内容进行展示。
-和其他平台一样，都是对底层能力做封装，但是 KubeVela 采用 CUE 模版 + CRD 动态注册机制 + 自动生成 UI Schema，提高了灵活性。
+- **自动生成 UI**：自动根据模块内容生成 `json schema`，UI 界面则会自动根据该 Schema 内容进行展示。
+和其他平台一样，都是对底层能力做封装，但是 KubeVela 采用 `CUE 模版 + CRD` 动态注册机制 + 自动生成 `UI Schema`，提高了灵活性。

@@ -1,6 +1,7 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/cilium-bgp-demo.svg
+date: 2024-02-05
 tag:
   - Cilium
   - 网络
@@ -9,7 +10,7 @@ tag:
 sticky: 1
 next:
   text: 'Cilium系列二：Cilium在集群网格Cluster Mesh中的实践'
-  link: '/cilium/exercise-cluster-mesh'
+  link: '/posts/cilium/exercise-cluster-mesh'
 ---
 
 # Cilium系列一：使用bird和cilium部署BGP模式的k8s集群

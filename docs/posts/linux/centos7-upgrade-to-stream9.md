@@ -1,6 +1,7 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/algorithm-1.jpeg
+date: 2024-02-01
 tag:
   - 虚拟机
   - linux

@@ -1,10 +1,14 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/go-cover1-slices.jpeg
+date: 2022-07-02
 tag:
   - Go
   - 编程基础
 sticky: 1
+next:
+  text: 'Go 基础知识系列二: 协程'
+  link: '/posts/programming/go/goroutine'
 ---
 
 # Go 基础知识系列一: 数组与切片
