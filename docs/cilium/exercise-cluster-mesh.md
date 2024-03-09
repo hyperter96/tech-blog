@@ -110,3 +110,147 @@ $ cilium clustermesh status --wait --context kind-mesh1
   - tion: 3/3 configured, 3/3 connected
 ```
 
+## 启用服务便于后续验证集群是否打通
+
+部署`rebel-base-deployment,yaml`文件如下，
+
+:::details `rebel-base-deployment.yaml`
+```yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rebel-base
+spec:
+  selector:
+    matchLabels:
+      name: rebel-base
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: rebel-base
+    spec:
+      containers:
+      - name: rebel-base
+        image: docker.io/nginx:1.15.8
+        volumeMounts:
+          - name: html
+            mountPath: /usr/share/nginx/html/
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 1
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+      volumes:
+        - name: html
+          configMap:
+            name: rebel-base-response
+            items:
+              - key: message
+                path: index.html
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: x-wing
+spec:
+  selector:
+    matchLabels:
+      name: x-wing
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: x-wing
+    spec:
+      containers:
+      - name: x-wing-container
+        image: docker.io/cilium/json-mock:1.2
+        livenessProbe:
+          exec:
+            command:
+            - curl
+            - -sS
+            - -o
+            - /dev/null
+            - localhost
+        readinessProbe:
+          exec:
+            command:
+            - curl
+            - -sS
+            - -o
+            - /dev/null
+            - localhost
+```
+:::
+
+两个集群分别配置`rebel-base-deployment.yaml`和对应的configmap，
+
+:::code-group
+```bash [kind-mesh1]
+$ kubectl --context kind-mesh1 apply -f rebel-base-deployment.yaml
+$ kubectl --context kind-mesh1 apply -f - <<EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rebel-base-response
+data:
+  message: "{\"Cluster\": \"mesh1\", \"Planet\": \"N'Zoth\"}\n"
+EOF
+```
+```bash [kind-mesh2]
+$ kubectl --context kind-mesh2 apply -f rebel-base-deployment.yaml
+$ kubectl --context kind-mesh2 apply -f - <<EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rebel-base-response
+data:
+  message: "{\"Cluster\": \"mesh2\", \"Planet\": \"Foran Tutha\"}\n"
+EOF
+## 部署service
+$ kubectl --context kind-mesh2 apply -f - <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: rebel-base
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    name: rebel-base
+EOF
+```
+:::
+
+
+验证pod是否完成部署并能够提供服务
+
+:::code-group
+```bash [kind-mesh1]
+kubectl --context kind-mesh1 exec -ti deployments/x-wing -- /bin/sh -c 'for i in $(seq 1 10); do curl rebel-base; done'
+```
+```bash [kind-mesh2]
+kubectl --context kind-mesh2 exec -ti deployments/x-wing -- /bin/sh -c 'for i in $(seq 1 10); do curl rebel-base; done'
+```
+:::
+
+## 通过注解实现不同集群服务互相访问
+
+在不同的集群上对service添加注解
+
+:::code-group
+```bash [kind-mesh1]
+kubectl --context kind-mesh1 annotate service rebel-base service.cilium.io/global="true"
+```
+```bash [kind-mesh2]
+kubectl --context kind-mesh2 annotate service rebel-base service.cilium.io/global="true"
+```
+:::
