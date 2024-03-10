@@ -6,7 +6,7 @@ head:
     - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/catch-the-cat.js'
   - - script
     - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/game.js'
-      defer: 'defer'
+      defer: defer
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/catch-the-cat.jpg
 tags:
