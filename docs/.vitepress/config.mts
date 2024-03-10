@@ -45,7 +45,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '趣味', items: [
-        { text: '逮住那只猫！', link: '/fun/catch-the-cat' },
+        { text: '逮住那只猫！', link: '/fun/catch-the-cat.html' },
       ]},
       { text: '关于我', link: '/aboutme.html' }
     ],

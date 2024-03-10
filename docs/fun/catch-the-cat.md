@@ -1,4 +1,6 @@
 ---
+date: 2021-02-02T11:04:49+08:00
+draft: false
 head:
   - - script
     - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/phaser.min.js'
@@ -6,7 +8,7 @@ head:
     - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/catch-the-cat.js'
   - - script
     - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/game.js'
-      defer: defer
+      # defer: defer
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/catch-the-cat.jpg
 tags:
@@ -25,10 +27,3 @@ tags:
 <div align="center">
     <div id="catch-the-cat"></div>
 </div>
-
-<!-- {{ head }}
-
-<script setup>
-    import { useData } from 'vitepress'
-    const { head }= useData()
-</script> -->
