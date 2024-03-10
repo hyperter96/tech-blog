@@ -11,6 +11,9 @@ sticky: 1
 prev:
   text: 'Kubevela系列一：初识 KubeVela，基于 OAM 模型的应用交付平台'
   link: '/posts/kubevela/get-to-know-kubevela'
+next:
+  text: 'Kubevela系列三：Application Controller 源码分析(下)'
+  link: '/posts/kubevela/application-controller-source-code-analysis-2'
 ---
 
 # Kubevela系列二：Application Controller 源码分析(上)
@@ -20,13 +23,13 @@ prev:
 本文旨在通过分析源码，解决一个大问题和几个小问题。
 
 > [!IMPORTANT] 提问
-> KubeVela 中的 Application 对象是怎么工作的?
+> KubeVela 中的 `Application` 对象是怎么工作的?
 >
 > 几个小问题：
 > 
-> - App 中的 components 是怎么转换为 k8s object 的
-> - App 中的 policy 分别是怎么工作的
-> - App 中的 workflow 是怎么运行的
+> - App 中的 `components` 是怎么转换为 `k8s object` 的
+> - App 中的 `policy` 分别是怎么工作的
+> - App 中的 `workflow` 是怎么运行的
 
 由于篇幅比较长，因此拆分成了上下两篇文章。
 
@@ -158,7 +161,7 @@ kubectl apply -f app.yaml
 这部分就是解析我们 apply 到集群的这个 `Application` 对象，将其转换为 KubeVela 内部的一个叫做 `appfile` 的对象。
 
 :::warning 注意
-这也是 Controller 中的第一部分逻辑，后续所有逻辑都是对 appfile 对象的处理。
+这也是 Controller 中的第一部分逻辑，后续所有逻辑都是对 `appfile` 对象的处理。
 :::
 
 Controller 中将 `app` 对象解析为 `appfile` 结构体，大概就是下面这部分代码：

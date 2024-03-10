@@ -51,11 +51,11 @@ tags:
 你的指尖,拥有改变世界的力量:smile:
 
 ## :phone:联系我
-**邮箱**：hyperter96@gmail.com
+**邮箱:email:**：hyperter96@gmail.com
 
 **微信公众号**：
 
-![图片](./assets/images/weixin-qrcode.jpg)
+![图片](./assets/images/mp-code.png)
 
 **微信打赏**：
 
