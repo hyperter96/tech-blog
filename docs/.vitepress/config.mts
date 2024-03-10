@@ -17,18 +17,6 @@ export default defineConfig({
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     ['link', { rel: 'icon', href: '/tech-blog/favicon.ico' }],
-    // [
-    //   'script',
-    //   {src: '/tech-blog/assets/js/phaser.min.js' }
-    // ],
-    // [
-    //   'script',
-    //   {src: '/tech-blog/assets/js/catch-the-cat.js' }
-    // ],
-    // [
-    //   'script',
-    //   {defer: 'defer', src: '/tech-blog/assets/js/game.js' }
-    // ]
   ],
   markdown: {
     image: {

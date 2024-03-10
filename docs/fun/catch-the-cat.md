@@ -26,9 +26,9 @@ tags:
     <div id="catch-the-cat"></div>
 </div>
 
-{{ head }}
+<!-- {{ head }}
 
 <script setup>
     import { useData } from 'vitepress'
     const { head }= useData()
-</script>
+</script> -->
