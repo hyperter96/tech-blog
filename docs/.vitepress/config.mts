@@ -37,11 +37,11 @@ export default defineConfig({
 
     // 设置logo
     logo: '/selfie.jpeg',
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
-    //   text: '去 GitHub 上编辑内容'
-    // },
+    editLink: {
+      pattern:
+        'https://github.com/hyperter96/tech-blog/tree/main/docs/:path',
+      text: '去 GitHub 上编辑内容'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '趣味', items: [
