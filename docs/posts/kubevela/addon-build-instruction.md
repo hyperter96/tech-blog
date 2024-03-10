@@ -50,12 +50,12 @@ KubeVela 的插件主要包含两部分：
 插件的工作机制如上图所示，KubeVela 的应用具备多集群交付的能力，所以也能帮助插件中的 CRD Operator 部署到这些集群中。模块定义文件仅需要在控制面被 KubeVela 使用，所以无需部署到被管控的集群中。
 
 :::tip
-一旦插件被安装，就会创建一个 KubeVela 应用，包含所有的相关资源和配置，这些配置都会设置 KubeVela 应用对外作为 OwnerReference（父节点）。当我们想要卸载一个插件时，只需要删除这个应用，Kubernetes 提供的资源回收机制会自动将标记了 OwnerReference 的资源一并删除。
+一旦插件被安装，就会创建一个 KubeVela 应用，包含所有的相关资源和配置，这些配置都会设置 KubeVela 应用对外作为 `OwnerReference`（父节点）。当我们想要卸载一个插件时，只需要删除这个应用，Kubernetes 提供的资源回收机制会自动将标记了 `OwnerReference` 的资源一并删除。
 :::
 
-例如一个 Redis 插件，它能让用户在自己的应用中使用 Redis 集群类型的组件（Component），这样可以快速创建 Redis 集群。那么这个插件至少会包括一个 Redis Operator 来提供创建 Redis 集群的能力（通过 Application 描述），还有一个组件的模块定义 （ComponentDefinition） 来提供 Redis 集群的组件类型。
+例如一个 Redis 插件，它能让用户在自己的应用中使用 Redis 集群类型的组件（Component），这样可以快速创建 Redis 集群。那么这个插件至少会包括一个 Redis Operator 来提供创建 Redis 集群的能力（通过 Application 描述），还有一个组件的模块定义 （`ComponentDefinition`） 来提供 Redis 集群的组件类型。
 
-所有整个插件的安装过程会将 Redis Operator 放在一个 KubeVela 应用中下发到多集群，而组件定义和 UI 扩展等配置文件则只部署到控制面集群并设置应用对象为 OwnerReference。
+所有整个插件的安装过程会将 Redis Operator 放在一个 KubeVela 应用中下发到多集群，而组件定义和 UI 扩展等配置文件则只部署到控制面集群并设置应用对象为 `OwnerReference`。
 
 ## 创建自己的插件
 
@@ -71,7 +71,7 @@ KubeVela 的插件主要包含两部分：
 
 **首先我们需要思考我们要创建的插件有什么作用？** 例如我们假设 Redis 插件可以提供 `redis-failover` 类型的 Component，这样用户只需在 Application 中定义一个 `redis-failover` Component 即可快速创建 Redis 集群。
 
-**然后考虑如何达到这个目的？** 要提供 `redis-failover` 类型的 Component 我们需要定义一个 ComponentDefinition ；要提供创建 Redis 集群的能力支持，我们可以使用 [Redis Operator](https://github.com/spotahome/redis-operator) 。
+**然后考虑如何达到这个目的？** 要提供 `redis-failover` 类型的 Component 我们需要定义一个 `ComponentDefinition` ；要提供创建 Redis 集群的能力支持，我们可以使用 [Redis Operator](https://github.com/spotahome/redis-operator) 。
 
 那至此我们的大目标就明确了：
 
@@ -101,11 +101,11 @@ redis-operator/
 让我们逐一来解释它们：
 
 1. `redis-operator/` 是目录名，同时也是插件名称，请保持一致。
-2. `definitions/` 用于存放模块定义, 例如 TraitDefinition 和 ComponentDefinition。
-3. `redis-failover.cue` 定义我们编写的 redis-failover 组件类型，包含了用户如何使用这个组件的参数以及这个组件与底层资源交互的细节。
+2. `definitions/` 用于存放模块定义, 例如 `TraitDefinition` 和 `ComponentDefinition`。
+3. `redis-failover.cue` 定义我们编写的 `redis-failover` 组件类型，包含了用户如何使用这个组件的参数以及这个组件与底层资源交互的细节。
 4. `resources/` 用于存放资源文件, 之后会在 `template.cue` 中使用他们共同组成一个 KubeVela 应用来部署插件。
 5. `crd.yaml` 是 Redis Operator 的 Kubernetes 自定义资源定义，在 `resources/` 文件夹中的 YAML 文件会被直接部署到集群中。
-6. `redis-operator.cue` 一个 web-service 类型的 Component ，用于安装 Redis Operator。
+6. `redis-operator.cue` 一个 `web-service` 类型的 Component ，用于安装 Redis Operator。
 7. `topology.cue` 是可选的，帮助 KubeVela 建立应用所纳管资源的拓扑关系。
 8. `metadata.yaml` 是插件的元数据，包含插件名称、版本、维护人等，为插件中心提供了概览信息。
 9. `parameter.cue` 插件参数定义，用户可以利用这些参数在插件安装时做轻量级自定义。
@@ -126,15 +126,15 @@ parameter: {
 }
 ```
 
-在 `parameter.cue` 中定义的参数都是用户可以自定义的（类似于 Helm Values），后续在 template.cue 或者 resources 中可以通过 `parameter.<parameter-name>` 访问参数。在我们的例子中，用户可以自定义 `image` ，这样后续我们创建 Redis Operator (`redis-operator.cue`) 的时候可以通过 `parameter.image` 使用用户指定的容器镜像。
+在 `parameter.cue` 中定义的参数都是用户可以自定义的（类似于 Helm Values），后续在 `template.cue` 或者 `resources` 中可以通过 `parameter.<parameter-name>` 访问参数。在我们的例子中，用户可以自定义 `image` ，这样后续我们创建 Redis Operator (`redis-operator.cue`) 的时候可以通过 `parameter.image` 使用用户指定的容器镜像。
 
 参数不仅可以给用户预留安装时的自定义输入，还可以作为安装时的条件进行部分安装。比如 `fluxcd` 插件有一个参数叫 [`onlyHelmComponents`](https://github.com/kubevela/catalog/blob/master/addons/fluxcd/parameter.cue)，它的作用就是可以帮助用户只部署用于安装 Helm Chart 的组件能力，而其他控制器就可以不安装。如果你对于实现细节感兴趣，可以参考fluxcd 插件的 [这部分配置](https://github.com/kubevela/catalog/blob/master/addons/fluxcd/template.cue#L25).
 
 在设计提供什么参数供用户自定义插件安装时，我们也应该遵循一下这些最佳实践来为用户提供更好的使用体验。
 
 :::tip 最佳实践
-- 不要在 parameter.cue 中提供大量的细节参数，将大量细节抽象出少量参数供用户调节是一个更好的做法
-- 为参数提供默认值（如样例中的 image 参数）或将参数标记为可选（如样例的 clusters 参数），确保用户仅使用默认值可以得到一个可用的配置
+- 不要在 `parameter.cue` 中提供大量的细节参数，将大量细节抽象出少量参数供用户调节是一个更好的做法
+- 为参数提供默认值（如样例中的 `image` 参数）或将参数标记为可选（如样例的 `clusters` 参数），确保用户仅使用默认值可以得到一个可用的配置
 - 为参数提供使用说明（通过注释标记实现，见样例）
 - 尽量保持插件不同版本间的参数一致，防止因为升级导致不兼容
 :::
@@ -145,7 +145,7 @@ parameter: {
 
 `template.cue` 和 `resources/` 目录本质上是相同的，都是构成 KubeVela 应用的组成部分，且都是在同一个 package 下的 CUE 文件。
 
-那为什么需要 resources 目录呢？除去历史原因，这主要是为了可读性的考虑，在 Application 中包含大量资源的时候 template.cue 可能变得很长，这时我们可以把资源放置在 resource 中增加可读性。一般来说，我们将 Application 的框架放在 template.cue 中，将 Application 内部的 Components、Traits 等信息放在 resource 目录中。
+那为什么需要 `resources` 目录呢？除去历史原因，这主要是为了可读性的考虑，在 Application 中包含大量资源的时候 `template.cue` 可能变得很长，这时我们可以把资源放置在 `resource` 中增加可读性。一般来说，我们将 Application 的框架放在 `template.cue` 中，将 Application 内部的 Components、Traits 等信息放在 `resource` 目录中。
 
 #### template.cue
 
@@ -184,7 +184,7 @@ outputs: topology: resourceTopology // 定义于 resources/topology.cue 中
 
 在插件安装时，系统主要关注两个关键字：
 
-- 一是 `output` 字段，定义了插件对应的应用，在应用内部 `spec.components` 定义了部署的组件，在我们的例子中引用了存放在 `resources/` 目录中的 `redisOperator` 组件。output 中的 Application 对象不是严格的 Kubernetes 对象，其中 metadata 里的内容（主要是插件名称）会被插件安装的过程自动注入。
+- 一是 `output` 字段，定义了插件对应的应用，在应用内部 `spec.components` 定义了部署的组件，在我们的例子中引用了存放在 `resources/` 目录中的 `redisOperator` 组件。output 中的 Application 对象不是严格的 Kubernetes 对象，其中 `metadata` 里的内容（主要是插件名称）会被插件安装的过程自动注入。
 - 另一个是 `outputs` 字段，定义了除了常规应用之外的配置，任何你想要跟插件一同部署的额外 Kubernetes 对象都可以定义在这里。请注意 outputs 中的这些对象必须遵循 Kubernetes API。
 
 #### `resources/` 资源文件
@@ -276,7 +276,7 @@ resourceTopology: {
 
 ### `definitions/` 目录
 
-Definitions 目录存放 KubeVela [模块定义（Definition）](https://kubevela.io/docs/getting-started/definition)，包括组件定义（ComponentDefinition）、策略定义（TraitDefinition）等。**这是插件中最重要的部分，因为它包含了最终用户安装这个插件以后可以获得哪些功能。**有了这里定义的组件、运维特征、工作流等类型，最终用户就可以在应用中使用他们了。
+Definitions 目录存放 KubeVela [模块定义（Definition）](https://kubevela.io/docs/getting-started/definition)，包括组件定义（`ComponentDefinition`）、策略定义（`TraitDefinition`）等。**这是插件中最重要的部分，因为它包含了最终用户安装这个插件以后可以获得哪些功能。**有了这里定义的组件、运维特征、工作流等类型，最终用户就可以在应用中使用他们了。
 
 在插件中编写模块定义跟常规的编写流程一致，这是一个很大的话题，在这里我们就不详细展开了。你可以通过阅读模块定义对应的文档了解其中的细节：
 

@@ -16,7 +16,19 @@ export default defineConfig({
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
-    ['link', { rel: 'icon', href: '/tech-blog/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/tech-blog/favicon.ico' }],
+    // [
+    //   'script',
+    //   {src: '/tech-blog/assets/js/phaser.min.js' }
+    // ],
+    // [
+    //   'script',
+    //   {src: '/tech-blog/assets/js/catch-the-cat.js' }
+    // ],
+    // [
+    //   'script',
+    //   {defer: 'defer', src: '/tech-blog/assets/js/game.js' }
+    // ]
   ],
   markdown: {
     image: {
@@ -44,6 +56,9 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
+      { text: '趣味', items: [
+        { text: '逮住那只猫！', link: '/fun/catch-the-cat' },
+      ]},
       { text: '关于我', link: '/aboutme.html' }
     ],
     socialLinks: [
