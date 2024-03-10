@@ -8,7 +8,7 @@ head:
     - src: '/tech-blog/assets/js/game.js'
       defer: 'defer'
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/catch-the-cat.jpg
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/catch-the-cat.jpg
 tags:
  - 其它
 ---
