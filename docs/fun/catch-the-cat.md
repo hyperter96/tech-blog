@@ -1,11 +1,11 @@
 ---
 head:
   - - script
-    - src: '/tech-blog/assets/js/phaser.min.js'
+    - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/phaser.min.js'
   - - script
-    - src: '/tech-blog/assets/js/catch-the-cat.js'
+    - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/catch-the-cat.js'
   - - script
-    - src: '/tech-blog/assets/js/game.js'
+    - src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/game.js'
       defer: 'defer'
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/catch-the-cat.jpg
