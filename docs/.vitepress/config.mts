@@ -55,5 +55,5 @@ export default defineConfig({
         link: 'https://github.com/hyperter96/tech-blog'
       }
     ]
-  }
+  },
 })
