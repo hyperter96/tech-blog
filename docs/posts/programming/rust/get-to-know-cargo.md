@@ -6,6 +6,9 @@ tag:
   - Rust
   - 编程基础
 sticky: 1
+next:
+  text: 'Rust基础知识系列二：语句、表达式和函数'
+  link: '/posts/programming/rust/rust-function'
 ---
 
 # Rust基础知识系列一：认识Cargo
@@ -54,7 +57,7 @@ hello_world/
 
 ```bash
 $ cargo check
-    Checking world_hello v0.1.0 (/Users/sunfei/development/rust/world_hello)
+    Checking world_hello v0.1.0 (/root/go/src/rust-learning/hello_world)
     Finished dev [unoptimized + debuginfo] target(s) in 0.06s
 ```
 
