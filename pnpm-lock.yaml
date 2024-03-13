@@ -25,6 +25,9 @@ dependencies:
     version: 3.4.15(typescript@5.3.3)
 
 devDependencies:
+  '@nolebase/vitepress-plugin-enhanced-readabilities':
+    specifier: ^1.23.0
+    version: 1.23.0(vitepress@1.0.0-rc.40)
   sass:
     specifier: ^1.64.1
     version: 1.71.1
@@ -500,6 +503,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
     dev: false
+
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.23.0(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-MAbWc511HcOBbASUfa1mvJMcdx6JF4mri6c7mU/RifyTUih3kHdN0jVMjx8tdyTqntLYipSv1FD0d84ntScySQ==}
+    peerDependencies:
+      vitepress: '>=1.0.0-rc.44'
+    dependencies:
+      vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(sass@1.71.1)(search-insights@2.13.0)(typescript@5.3.3)
+    dev: true
 
   /@rollup/rollup-android-arm-eabi@4.12.1:
     resolution: {integrity: sha512-iU2Sya8hNn1LhsYyf0N+L4Gf9Qc+9eBTJJJsaOGUp+7x4n2M9dxTt8UvhJl3oeftSjblSlpCfvjA/IfP3g5VjQ==}

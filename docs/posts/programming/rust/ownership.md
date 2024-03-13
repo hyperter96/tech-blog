@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Rust基础知识系列二：语句、表达式和函数'
   link: '/posts/programming/rust/rust-function'
+next:
+  text: 'Rust基础知识系列四：引用与借用'
+  link: '/posts/programming/rust/borrowing'
 ---
 
 # Rust基础知识系列三：所有权

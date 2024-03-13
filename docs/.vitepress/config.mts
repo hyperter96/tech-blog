@@ -24,6 +24,14 @@ export default defineConfig({
       lazyLoading: true
     },
   },
+  vite: { 
+    ssr: { 
+      noExternal: [ 
+        // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
+        '@nolebase/vitepress-plugin-enhanced-readabilities', 
+      ], 
+    }, 
+  },
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {

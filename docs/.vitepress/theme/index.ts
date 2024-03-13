@@ -1,3 +1,4 @@
+import { h } from 'vue'
 import BlogTheme from '@sugarat/theme'
 // import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 // import { useData, useRoute } from 'vitepress';
@@ -6,7 +7,11 @@ import './style.scss'
 
 // 自定义主题色
 // import './user-theme.css'
-
+import { 
+  NolebaseEnhancedReadabilitiesMenu, 
+  NolebaseEnhancedReadabilitiesScreenMenu, 
+} from '@nolebase/vitepress-plugin-enhanced-readabilities'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import vitepressMusic from 'vitepress-plugin-music'
 import 'vitepress-plugin-music/lib/css/index.css'
 
@@ -44,6 +49,14 @@ const playlist = [
 ]
 export default {
     ...BlogTheme,
+    Layout: () => {
+      return h(BlogTheme.Layout, undefined, {
+        // 为较宽的屏幕的导航栏添加阅读增强菜单
+        'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu), 
+        // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
+        'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu), 
+      })
+    },
     enhanceApp: (ctx) => {
       vitepressMusic(playlist)
     }
