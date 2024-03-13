@@ -35,7 +35,7 @@ Velero 组件一共分两部分，分别是服务端和客户端。
 ![](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/velero-workflow.png)
 
 ### Velero后端存储
-Velero支持两种关于后端存储的CRD，分别是BackupStorageLocation和VolumeSnapshotLocation。
+Velero支持两种关于后端存储的CRD，分别是`BackupStorageLocation`和`VolumeSnapshotLocation`。
 
 #### BackupStorageLocation
 
@@ -273,7 +273,9 @@ deployment.apps/nginx-deployment   2/2     2            2           41s
 NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-57d5dcb68   2         2         2       41s
 ```
+
 #### 备份测试应用
+
 ```bash
 $ velero backup create nginx-backup --include-namespaces nginx-example
 Backup request "nginx-backup" submitted successfully.
@@ -376,14 +378,14 @@ replicaset.apps/nginx-deployment-57d5dcb68   2         2         2       2m19s
 - 迁移项目最好保证两个Kubernetes集群版本一致。
 - 为了保证PV数据成功迁移，两边需要安装好相同名字的StorageClass。
 - 可以自己部署Minio，也可以使用公有云的对象存储服务，如华为的OBS、阿里的OSS等。
-- 本案例将集群A中app-system命名空间中的服务及PV数据迁移到集群B中。
+- 本案例将集群A中`app-system`命名空间中的服务及PV数据迁移到集群B中。
 
 #### 项目环境
 
 |角色     |	集群IP       |	集群版本  |	部署软件 |
 |---------|--------------|----------|------------------------------|
-|K8S 集群A|	192.168.1.102|	v1.22.10|	openebs、velero、app-system|
-|K8S 集群B|	192.168.1.103|	v1.22.10|	openebs、velero、minio     |
+|K8S 集群A|	192.168.1.102|	v1.22.10|	`openebs、velero、app-system`|
+|K8S 集群B|	192.168.1.103|	v1.22.10|	`openebs、velero、minio`     |
 
 #### 项目说明
 
@@ -443,7 +445,7 @@ EOF
  
 $ velero install \
   --provider aws \
-  --image velero/velero:v1.10.2 \
+  --image velero/velero:v1.13.0 \
   --plugins velero/velero-plugin-for-aws:v1.6.0 \
   --bucket velero \
   --secret-file ./credentials-velero \
@@ -468,7 +470,7 @@ EOF
  
 $ velero install \
   --provider aws \
-  --image velero/velero:v1.10.2 \
+  --image velero/velero:v1.13.0 \
   --plugins velero/velero-plugin-for-aws:v1.6.0 \
   --bucket velero \
   --secret-file ./credentials-velero \

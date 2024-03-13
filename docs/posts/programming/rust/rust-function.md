@@ -7,8 +7,11 @@ tag:
   - 编程基础
 sticky: 1
 prev:
-  text: '# Rust基础知识系列一：认识Cargo'
+  text: 'Rust基础知识系列一：认识Cargo'
   link: '/posts/programming/rust/get-to-know-cargo'
+next:
+  text: 'Rust基础知识系列三：所有权'
+  link: '/posts/programming/rust/ownership'
 ---
 
 # Rust基础知识系列二：语句、表达式和函数
