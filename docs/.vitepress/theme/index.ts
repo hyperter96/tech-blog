@@ -7,9 +7,11 @@ import './style.scss'
 
 // 自定义主题色
 // import './user-theme.css'
+import type { Options } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import { 
   NolebaseEnhancedReadabilitiesMenu, 
   NolebaseEnhancedReadabilitiesScreenMenu, 
+  InjectionKey,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import vitepressMusic from 'vitepress-plugin-music'
@@ -59,6 +61,20 @@ export default {
     },
     enhanceApp: (ctx) => {
       vitepressMusic(playlist)
+      ctx.app.provide(InjectionKey, {
+        locales: { // 配置国际化
+          'zh-CN': { // 配置简体中文
+            title: { 
+              title: '阅读增强插件', 
+            } 
+          }, 
+          'en': { // 配置英文
+            title: { 
+              title: 'Enhanced Readabilities Plugin', 
+            } 
+          } 
+        } 
+      } as Options)
     }
   }
 // export default BlogTheme;

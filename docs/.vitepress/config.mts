@@ -8,7 +8,7 @@ import { blogTheme } from './blog-theme'
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
-  lang: 'zh-cn',
+  lang: 'zh-CN',
   title: '皮特ᴾᵗ的博客技术站',
   description: '热衷于云原生技术，一直为实现自我价值而执着！',
   base: "/tech-blog/", // 部署到github上时访问的根目录

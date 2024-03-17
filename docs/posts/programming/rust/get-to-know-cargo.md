@@ -7,8 +7,8 @@ tag:
   - 编程基础
 sticky: 1
 next:
-  text: 'Rust基础知识系列二：语句、表达式和函数'
-  link: '/posts/programming/rust/rust-function'
+  text: 'Rust基础知识系列二：语句、表达式、格式化输出'
+  link: '/posts/programming/rust/statement-expr-print'
 ---
 
 # Rust基础知识系列一：认识Cargo

@@ -1,20 +1,20 @@
 ---
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/rust-cover3.jpg
-date: 2023-11-06
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/rust-cover7.jpg
+date: 2023-11-08
 tag:
   - Rust
   - 编程基础
 sticky: 1
 prev:
-  text: 'Rust基础知识系列二：语句、表达式和函数'
+  text: 'Rust基础知识系列六：函数'
   link: '/posts/programming/rust/rust-function'
 next:
-  text: 'Rust基础知识系列四：引用与借用'
+  text: 'Rust基础知识系列八：引用与借用'
   link: '/posts/programming/rust/borrowing'
 ---
 
-# Rust基础知识系列三：所有权
+# Rust基础知识系列七：所有权
 
 所有的程序都必须和计算机内存打交道，如何从内存中申请空间来存放程序的运行内容，如何在不需要的时候释放这些空间，成了重中之重，也是所有编程语言设计的难点之一。在计算机语言不断演变过程中，出现了三种流派：
 

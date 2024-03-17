@@ -1,17 +1,17 @@
 ---
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/rust-cover4.jpg
-date: 2023-11-07
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/rust-cover8.jpg
+date: 2023-11-09
 tag:
   - Rust
   - 编程基础
 sticky: 1
 prev:
-  text: 'Rust基础知识系列三：所有权'
+  text: 'Rust基础知识系列七：所有权'
   link: '/posts/programming/rust/ownership'
 ---
 
-# Rust基础知识系列四：引用与借用
+# Rust基础知识系列八：引用与借用
 
 上节中提到，如果仅仅支持通过转移所有权的方式获取一个值，那会让程序变得复杂。 Rust 能否像其它编程语言一样，使用某个变量的指针或者引用呢？答案是可以。
 
