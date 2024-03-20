@@ -11,6 +11,9 @@ sticky: 1
 prev:
   text: 'Cilium系列一：使用bird和cilium部署BGP模式的k8s集群'
   link: '/posts/cilium/bgp-exercise-bird-cilium'
+next:
+  text: 'Cilium系列三：Cilium集成kubeOVN安装k8s集群'
+  link: '/posts/cilium/install-cluster-with-kubeOVN'
 ---
 
 # Cilium系列二：Cilium在集群网格Cluster Mesh中的实践
@@ -113,7 +116,7 @@ $ cilium clustermesh status --wait --context kind-mesh1
 
 ## 启用服务便于后续验证集群是否打通
 
-部署`rebel-base-deployment,yaml`文件如下，
+部署`rebel-base-deployment.yaml`文件如下，
 
 :::details `rebel-base-deployment.yaml`
 ```yaml

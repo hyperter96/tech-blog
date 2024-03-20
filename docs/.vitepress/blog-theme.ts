@@ -51,7 +51,7 @@ const blogTheme = getThemeConfig({
       nickname: '皮特ᴾᵗ',
       des: '你的指尖用于改变世界的力量',
       avatar:
-        'https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/selfie.jpeg',
+        'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog@gh-pages/selfie.jpeg',
       url: 'https://hyperter96.github.io/tech-blog/',
     },
     {

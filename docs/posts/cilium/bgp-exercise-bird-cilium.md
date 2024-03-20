@@ -56,7 +56,7 @@ EOF
 创建用于第二个集群的 Docker 网络：
 
 ```bash
-docker network create -d=bridge \
+$ docker network create -d=bridge \
     -o "com.docker.network.bridge.enable_ip_masquerade=true" \
     --attachable \
     "kind2"
