@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Go 基础知识系列一: 数组与切片'
   link: '/posts/programming/go/array-and-slices'
+next:
+  text: 'Go 基础知识系列三: 等待组waitGroup'
+  link: '/posts/programming/go/waitgroup'
 ---
 
 # Go 基础知识系列二: 协程

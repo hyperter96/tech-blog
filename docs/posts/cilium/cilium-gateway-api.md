@@ -9,11 +9,11 @@ tag:
   - kubernetes
 sticky: 1
 prev:
-  text: 'Cilium系列三：Cilium集成kubeOVN安装k8s集群'
+  text: 'Cilium系列四：Cilium集成kubeOVN安装k8s集群'
   link: '/posts/cilium/install-cluster-with-kubeOVN'
 ---
 
-# Cilium系列四：Cilium集成Gateway API
+# Cilium系列五：Cilium集成Gateway API
 
 ## 前置条件
 

@@ -9,14 +9,14 @@ tag:
   - kubernetes
 sticky: 1
 prev:
-  text: 'Cilium系列二：Cilium在集群网格Cluster Mesh中的实践'
+  text: 'Cilium系列三：Cilium在集群网格Cluster Mesh中的实践'
   link: '/posts/cilium/exercise-cluster-mesh'
 next:
-  text: 'Cilium系列四：Cilium集成Gateway API'
+  text: 'Cilium系列五：Cilium集成Gateway API'
   link: '/posts/cilium/cilium-gateway-api'
 ---
 
-# Cilium系列三：Cilium集成kubeOVN安装k8s集群
+# Cilium系列四：Cilium集成kubeOVN安装k8s集群
 
 ## 前提条件
 

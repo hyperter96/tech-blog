@@ -9,14 +9,14 @@ tag:
   - kubernetes
 sticky: 1
 prev:
-  text: 'Cilium系列一：使用bird和cilium部署BGP模式的k8s集群'
+  text: 'Cilium系列二：使用bird和cilium部署BGP模式的k8s集群'
   link: '/posts/cilium/bgp-exercise-bird-cilium'
 next:
-  text: 'Cilium系列三：Cilium集成kubeOVN安装k8s集群'
+  text: 'Cilium系列四：Cilium集成kubeOVN安装k8s集群'
   link: '/posts/cilium/install-cluster-with-kubeOVN'
 ---
 
-# Cilium系列二：Cilium在集群网格Cluster Mesh中的实践
+# Cilium系列三：Cilium在集群网格Cluster Mesh中的实践
 
 Cilium Cluster Mesh 允许您连接多个集群的网络，只要所有集群都运行 Cilium 作为其 CNI，每个集群中的 pod 都可以发现和访问网格中所有其他集群中的服务。这允许有效地将多个集群加入到一个大型统一网络中，无论每个集群运行的 Kubernetes 发行版如何。
 

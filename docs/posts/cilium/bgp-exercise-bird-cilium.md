@@ -8,12 +8,15 @@ tag:
   - cni
   - kubernetes
 sticky: 1
+prev:
+  text: 'Cilium系列一：Cilium架构体系'
+  link: '/posts/cilium/cilium-intro'
 next:
-  text: 'Cilium系列二：Cilium在集群网格Cluster Mesh中的实践'
+  text: 'Cilium系列三：Cilium在集群网格Cluster Mesh中的实践'
   link: '/posts/cilium/exercise-cluster-mesh'
 ---
 
-# Cilium系列一：使用bird和cilium部署BGP模式的k8s集群
+# Cilium系列二：使用bird和cilium部署BGP模式的k8s集群
 
 这是使用 Cilium BGP 控制平面 (BGP CP) 向外部 BGP 路由器通告路由以及在两个集群之间路由的演示。 每个集群执行以下操作：
 
