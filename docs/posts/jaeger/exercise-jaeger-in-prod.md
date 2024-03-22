@@ -1,6 +1,6 @@
 ---
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/jaeger-cover1.jpg
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/Jaeger-cover1.jpg
 date: 2023-05-11
 author: 意琦行
 tag:

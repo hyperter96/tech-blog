@@ -1,6 +1,6 @@
 ---
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/hyperter96.github.io/img/k8s-2.jpg
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/k8s-2.jpeg
 categories: "kubernetes"
 date: 2023-05-06 11:45:56
 tags: ['kubernetes', '故障分析']
