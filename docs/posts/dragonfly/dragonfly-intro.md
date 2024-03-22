@@ -57,7 +57,7 @@ Dragonfly是一个基于P2P的开源文件分发和图像加速系统。 它由�
 
 当下载一个镜像或文件时，通过 `Peer` 的 HTTP Proxy 将下载请求代理到 `Dragonfly`。`Peer` 首先会向 `Scheduler` 注册 Task， `Scheduler` 会查看 Task 的信息，判断 Task 是否在 P2P 集群内第一次下载， 如果是第一次下载优先触发 `Seed Peer` 进行回源下载，并且下载过程中对 Task 基于 Piece 级别切分。注册成功后 `Peer` 会和 `Scheduler` 建立双向流， 然后将 `Seed Peer` 调度给 `Peer` 进行下载。`Seed Peer` 和 `Peer` 之间下载传输基于 Piece 级别进行流式传输。`Peer` 每下载成功一个 Piece， 会将信息上报给 `Scheduler` 供下次调度使用。如果 Task 在 P2P 集群内非第一次下载，那么 `Scheduler` 会调度其他 `Peer` 给当前 `Peer` 下载。 `Peer` 从不同的 `Peer` 下载 Piece，拼接并返回整个文件，那么 P2P 下载就完成了。
 
-![](https://cdn.jsdelivr.net/gh/dragonflyoss/Dragonfly2/docs/images/dragonfly-workflow.png)
+![](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/dragonfly-workflow.png)
 
 ## AI 场景下如何进行加速？
 
@@ -68,7 +68,7 @@ Dragonfly是一个基于P2P的开源文件分发和图像加速系统。 它由�
 - 框架
 - 外围数据
 
-![](https://cdn.jsdelivr.net/gh/dragonflyoss/Dragonfly2/docs/images/ai-data-distribution.png)
+![](https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/ai-data-distribution.png)
 
 ### 训练阶段
 

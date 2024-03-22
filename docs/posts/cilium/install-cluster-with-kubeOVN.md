@@ -262,6 +262,8 @@ $ helm upgrade cilium cilium/cilium --namespace kube-system \
 --set routingMode=native
 ```
 
+## 异常问题
+
 ### hubble relay异常
 
 升级完以后，如果发现hubble的状态不正常，查看日志发现
