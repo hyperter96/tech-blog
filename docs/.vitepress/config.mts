@@ -11,12 +11,12 @@ export default defineConfig({
   lang: 'zh-CN',
   title: '皮特ᴾᵗ的博客技术站',
   description: '热衷于云原生技术，一直为实现自我价值而执着！',
-  base: "/tech-blog/", // 部署到github上时访问的根目录
+  base: "/", // 部署到github上时访问的根目录
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
-    ['link', { rel: 'icon', href: '/tech-blog/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
   markdown: {
     image: {
