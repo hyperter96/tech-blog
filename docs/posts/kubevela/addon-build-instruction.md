@@ -11,6 +11,9 @@ sticky: 1
 prev:
   text: 'Kubevela系列三：Application Controller 源码分析(下)'
   link: '/posts/kubevela/application-controller-source-code-analysis-2'
+next:
+  text: 'Kubevela系列五：Kubevela集成多集群OCM'
+  link: '/posts/kubevela/kubevela-integrate-multicluster-ocm'
 ---
 
 # Kubevela系列四：插件指南-轻松扩展你的平台专属能力
