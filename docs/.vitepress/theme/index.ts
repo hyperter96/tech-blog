@@ -1,9 +1,11 @@
 import { h } from 'vue'
 import BlogTheme from '@sugarat/theme'
-// import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-// import { useData, useRoute } from 'vitepress';
+
 // 自定义样式重载
 import './style.scss'
+import { useData, useRoute } from 'vitepress';
+import codeblocksFold from 'vitepress-plugin-codeblocks-fold'; // import method
+import 'vitepress-plugin-codeblocks-fold/style/index.scss'; // import style
 
 // 自定义主题色
 // import './user-theme.css'
@@ -75,6 +77,13 @@ export default {
           } 
         } 
       } as Options)
+    },
+    setup() {
+      // get frontmatter and route
+      const { frontmatter } = useData();
+      const route = useRoute();
+      // basic use
+      codeblocksFold({ route, frontmatter }, true, 400);
     }
   }
 // export default BlogTheme;

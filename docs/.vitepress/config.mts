@@ -44,7 +44,7 @@ export default defineConfig({
     lastUpdatedText: '上次更新于',
 
     // 设置logo
-    logo: '/selfie.jpeg',
+    logo: '/favicon.ico',
     editLink: {
       pattern:
         'https://github.com/hyperter96/tech-blog/tree/main/docs/:path',
