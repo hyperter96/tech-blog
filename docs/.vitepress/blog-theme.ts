@@ -91,14 +91,10 @@ const blogTheme = getThemeConfig({
   popover: {
     title: '公告',
     body: [
-      { type: 'text', content: '👇公众号👇---👇 微信 👇' },
+      { type: 'text', content: '👇微信扫码添加好友👇' },
       {
         type: 'image',
-        src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/announcement.jpg'
-      },
-      {
-        type: 'text',
-        content: '欢迎大家添加公众号&私信交流'
+        src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/qrcode.png'
       },
       {
         type: 'button',
@@ -107,11 +103,11 @@ const blogTheme = getThemeConfig({
       },
       {
         type: 'button',
-        content: '添加微信',
+        content: '生活博客',
         props: {
           type: 'success'
         },
-        link: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/wechat-code.jpg',
+        link: 'https://life.hyperter.top',
       }
     ],
     duration: -1

@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Go 基础知识系列二: 协程'
   link: '/posts/programming/go/goroutine'
+next:
+  text: 'Go 基础知识系列四：接口interface'
+  link: '/posts/programming/go/interface'
 ---
 
 # Go 基础知识系列三: 等待组waitGroup
