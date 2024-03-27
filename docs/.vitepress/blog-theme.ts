@@ -40,7 +40,7 @@ const blogTheme = getThemeConfig({
   },
 
   // 主题色修改
-  themeColor: 'el-yellow',
+  themeColor: 'vp-green',
 
   // 文章默认作者
   author: '皮特ᴾᵗ',
@@ -90,11 +90,12 @@ const blogTheme = getThemeConfig({
   // 公告
   popover: {
     title: '公告',
+    mobileMinify: true,
     body: [
       { type: 'text', content: '👇微信扫码添加好友👇' },
       {
         type: 'image',
-        src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/qrcode.png'
+        src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/qrcode3.png'
       },
       {
         type: 'button',
