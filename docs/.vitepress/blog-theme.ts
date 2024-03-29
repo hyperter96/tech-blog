@@ -52,7 +52,7 @@ const blogTheme = getThemeConfig({
       des: '你的指尖用于改变世界的力量',
       avatar:
         'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog@gh-pages/selfie.jpeg',
-      url: 'https://tech.hyperter.top',
+      url: 'https://cs.hyperter.top',
     },
     {
       nickname: '洋洋得意',
