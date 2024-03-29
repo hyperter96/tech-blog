@@ -6,7 +6,7 @@ import './style.scss'
 import { useData, useRoute } from 'vitepress';
 import codeblocksFold from 'vitepress-plugin-codeblocks-fold'; // import method
 import 'vitepress-plugin-codeblocks-fold/style/index.scss'; // import style
-
+import { integrateReadabilities } from "./utils/client";
 // 自定义主题色
 // import './user-theme.css'
 import type { Options } from '@nolebase/vitepress-plugin-enhanced-readabilities'
@@ -18,7 +18,8 @@ import {
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import vitepressMusic from 'vitepress-plugin-music'
 import 'vitepress-plugin-music/lib/css/index.css'
-
+import vitepressNprogress from 'vitepress-plugin-nprogress'
+import 'vitepress-plugin-nprogress/lib/css/index.css'
 const playlist = [
   {
     name: '一起看星星（治愈曲）',
@@ -53,16 +54,10 @@ const playlist = [
 ]
 export default {
     ...BlogTheme,
-    Layout: () => {
-      return h(BlogTheme.Layout, undefined, {
-        // 为较宽的屏幕的导航栏添加阅读增强菜单
-        'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu), 
-        // 为较窄的屏幕（通常是小于 iPad Mini）添加阅读增强菜单
-        'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu), 
-      })
-    },
+    Layout: integrateReadabilities(BlogTheme.Layout),
     enhanceApp: (ctx) => {
       vitepressMusic(playlist)
+      vitepressNprogress(ctx)
       ctx.app.provide(InjectionKey, {
         locales: { // 配置国际化
           'zh-CN': { // 配置简体中文

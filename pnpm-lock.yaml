@@ -12,7 +12,7 @@ dependencies:
     specifier: ^0.2.24
     version: 0.2.24(typescript@5.3.3)(vitepress@1.0.0-rc.40)(vue@3.4.15)
   element-plus:
-    specifier: ^2.5.3
+    specifier: ^2.6.0
     version: 2.6.0(vue@3.4.15)
   vitepress-plugin-codeblocks-fold:
     specifier: ^1.2.28
@@ -23,6 +23,9 @@ dependencies:
   vitepress-plugin-music:
     specifier: ^0.0.9
     version: 0.0.9(vitepress@1.0.0-rc.40)
+  vitepress-plugin-nprogress:
+    specifier: ^0.0.4
+    version: 0.0.4
   vue:
     specifier: 3.4.15
     version: 3.4.15(typescript@5.3.3)
@@ -1931,6 +1934,10 @@ packages:
     resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==}
     dev: false
 
+  /nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
+
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -2190,6 +2197,12 @@ packages:
       vitepress: '>=1.x'
     dependencies:
       vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(sass@1.71.1)(search-insights@2.13.0)(typescript@5.3.3)
+    dev: false
+
+  /vitepress-plugin-nprogress@0.0.4:
+    resolution: {integrity: sha512-YzW36kBnjuFH91DOFIA5snyBf4WpF/cYfhAiyNefhqif8QQIKGsbpzvI8VN0M8RHLGr9iQyHhF7dQsm//Xf5Hw==}
+    dependencies:
+      nprogress: 0.2.0
     dev: false
 
   /vitepress-plugin-pagefind@0.2.12(typescript@5.3.3):

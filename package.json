@@ -12,10 +12,11 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@sugarat/theme": "^0.2.24",
-    "element-plus": "^2.5.3",
+    "element-plus": "^2.6.0",
     "vitepress-plugin-codeblocks-fold": "^1.2.28",
     "vitepress-plugin-comment-with-giscus": "^1.1.12",
     "vitepress-plugin-music": "^0.0.9",
+    "vitepress-plugin-nprogress": "^0.0.4",
     "vue": "3.4.15"
   },
   "directories": {
