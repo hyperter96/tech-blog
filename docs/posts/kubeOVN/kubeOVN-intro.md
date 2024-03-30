@@ -8,9 +8,9 @@ tag:
   - SDN
   - kubernetes
 sticky: 1
-# next:
-#   text: 'Cilium系列二：使用bird和cilium部署BGP模式的k8s集群'
-#   link: '/posts/cilium/bgp-exercise-bird-cilium'
+next:
+  text: 'KubeOVN系列二：配置VPC网关连通外部公网'
+  link: '/posts/kubeOVN/vpc-nat-gateway-config'
 ---
 
 # KubeOVN系列一：KubeOVN架构体系

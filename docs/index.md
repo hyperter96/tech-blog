@@ -12,5 +12,5 @@ blog:
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3000
  pageSize: 12
- logo: https://tech.hyperter.top/selfie.jpeg
+ logo: https://cs.hyperter.top/selfie.jpeg
 ---
