@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Client-go系列一: Client-go知识体系'
   link: '/posts/programming/go/client-go/intro'
+next:
+  text: 'Client-go系列三：认识Informer'
+  link: '/posts/programming/go/client-go/informer'
 ---
 
 # Client-go系列二: 认识ClientSet
