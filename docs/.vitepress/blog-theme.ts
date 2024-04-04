@@ -119,6 +119,12 @@ const blogTheme = getThemeConfig({
     ],
     duration: -1
   },
+  buttonAfterArticle: {
+    openTitle: '赞赏',
+    closeTitle: '下次一定',
+    content: '<img src="https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/wechatpay-code.jpg">',
+    icon: 'wechatPay'
+  }
 })
 
 export { blogTheme }
