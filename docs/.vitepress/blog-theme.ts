@@ -65,6 +65,12 @@ const blogTheme = getThemeConfig({
       des: '指月小筑(探索云原生)',
       avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/yiqixing.jpg',
       url: 'https://www.lixueduan.com/',
+    },
+    {
+      nickname: '熬小剑',
+      des: 'Service Mesh布道师, 云原生布道师, Dapr Approver',
+      avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/skyao.png',
+      url: 'https://skyao.io/',
     }
   ],
 

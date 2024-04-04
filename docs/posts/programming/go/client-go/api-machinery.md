@@ -1,6 +1,7 @@
 ---
 sidebar: false
 cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/client-go-cover.jpeg
+author: 熬小剑
 date: 2023-01-12
 tag:
   - Go
@@ -9,6 +10,9 @@ sticky: 1
 prev:
   text: 'Client-go系列四: Informer实战'
   link: '/posts/programming/go/client-go/informer-exercise'
+next:
+  text: 'Client-go系列六：Client-go类库（上）'
+  link: '/posts/programming/go/client-go/client-go-pkg-part1'
 ---
 
 # Client-go系列五：API Machinery
