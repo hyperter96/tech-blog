@@ -13,6 +13,29 @@ export default defineConfig({
   description: '热衷于云原生技术，一直为实现自我价值而执着！',
   base: "/", // 部署到github上时访问的根目录
   lastUpdated: true,
+  transformPageData(pageData, ctx) {
+    pageData.frontmatter.head ??= []
+    if (pageData.frontmatter.title == '逮住那只猫！'){
+      pageData.frontmatter.head.push([
+        'script',
+        {
+          src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/phaser.min.js'
+        }
+      ])
+      pageData.frontmatter.head.push([
+        'script',
+        {
+          src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/cat/catch-the-cat.js'
+        }
+      ])
+      pageData.frontmatter.head.push([
+        'script',
+        {
+          src: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/js/game.js'
+        }
+      ])
+    }
+  },
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）

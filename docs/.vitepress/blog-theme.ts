@@ -55,12 +55,6 @@ const blogTheme = getThemeConfig({
       url: 'https://cs.hyperter.top',
     },
     {
-      nickname: '洋洋得意',
-      des: '每一帧都是热爱',
-      avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/yyliao.jpg',
-      url: 'https://www.douyin.com/user/MS4wLjABAAAA3944Q_PGRxLuxLSdOlxOoDzJFnDXlpgyr-CO2aJ7tV8?vid=7336569870861045055',
-    },
-    {
       nickname: '意琦行',
       des: '指月小筑(探索云原生)',
       avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/yiqixing.jpg',
