@@ -65,6 +65,12 @@ const blogTheme = getThemeConfig({
       des: 'Service Mesh布道师, 云原生布道师, Dapr Approver',
       avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/skyao.png',
       url: 'https://skyao.io/',
+    },
+    {
+      nickname: '原子之音',
+      des: 'C++ Rust Unreal大家加油',
+      avatar: 'https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/yuanZiZhiYin.jpg',
+      url: 'https://space.bilibili.com/437860379',
     }
   ],
 

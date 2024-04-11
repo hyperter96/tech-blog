@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Go 基础知识系列三: 等待组waitGroup'
   link: '/posts/programming/go/waitgroup'
+next:
+  text: 'Go 基础知识系列五：Channel'
+  link: '/posts/programming/go/channel'
 ---
 
 # Go 基础知识系列四：接口interface

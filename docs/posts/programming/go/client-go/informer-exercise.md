@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Client-go系列三: 认识Informer'
   link: '/posts/programming/go/client-go/informer'
+next:
+  text: 'Client-go系列五：API Machinery'
+  link: '/posts/programming/go/client-go/api-machinery'
 ---
 
 # Client-go系列四：Informer实战
