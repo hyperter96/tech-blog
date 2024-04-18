@@ -9,6 +9,9 @@ sticky: 1
 prev:
   text: 'Go 基础知识系列四：接口interface'
   link: '/posts/programming/go/interface'
+next:
+  text: 'Go 基础知识系列六：互斥锁mutex'
+  link: '/posts/programming/go/mutex'
 ---
 
 # Go 基础知识系列五：Channel

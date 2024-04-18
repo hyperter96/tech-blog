@@ -7,9 +7,6 @@ tags:
  - 其它
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/catch-the-cat.jpg" width="800" height="700" alt="catch the cat" />
-
-
 ## 游戏规则
 
 1. 点击小圆点，围住小猫。
