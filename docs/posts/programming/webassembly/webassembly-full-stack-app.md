@@ -7,6 +7,9 @@ tag:
   - WebAssembly
   - 全栈开发
 sticky: 1
+next:
+  text: 'WebAssembly系列二：使用 WasmEdge Rust SDK 构建并运行 WebAssembly 应用程序'
+  link: '/posts/programming/webassembly/run-wasm-app-from-host'
 ---
 
 # WebAssembly系列一：Rust Web 全栈开发之编写 WebAssembly 应用

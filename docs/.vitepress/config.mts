@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+import  footnote_plugin  from "markdown-it-footnote";
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
@@ -46,6 +46,9 @@ export default defineConfig({
       // 开启图片懒加载
       lazyLoading: true
     },
+    config:(md)=>{
+      md.use(footnote_plugin)
+    }
   },
   vite: { 
     ssr: { 
