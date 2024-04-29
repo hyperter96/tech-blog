@@ -19,7 +19,8 @@
     "vitepress-plugin-comment-with-giscus": "^1.1.12",
     "vitepress-plugin-music": "^0.0.9",
     "vitepress-plugin-nprogress": "^0.0.4",
-    "vue": "3.4.15"
+    "vue": "3.4.15",
+    "xmind-embed-viewer": "^1.2.0"
   },
   "directories": {
     "doc": "docs"

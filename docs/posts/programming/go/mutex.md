@@ -8,7 +8,10 @@ tag:
 sticky: 1
 prev:
   text: 'Go 基础知识系列五：Channel'
-  link: /posts/programming/go/channel
+  link: '/posts/programming/go/channel'
+next:
+  text: 'Go 基础知识系列七：延迟函数调用Defer'
+  link: '/posts/programming/go/defer'
 ---
 
 # Go 基础知识系列六：互斥锁mutex
