@@ -78,6 +78,9 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
+      { text: '面试', items: [
+        { text: 'TCP篇', link: '/posts/interview/tcp.html'},
+      ]},
       { text: '趣味', items: [
         { text: '逮住那只猫！', link: '/fun/catch-the-cat.html' },
       ]},
