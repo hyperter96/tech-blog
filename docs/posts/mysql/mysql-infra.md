@@ -6,6 +6,9 @@ sticky: 1
 tags: 
   - kubernetes
   - MySQL
+next:
+  text: 'MySQL知识系列二：MySQL索引'
+  link: '/posts/mysql/mysql-index'
 ---
 
 # MySQL知识系列一：MySQL架构图

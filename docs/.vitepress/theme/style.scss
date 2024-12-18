@@ -40,15 +40,18 @@
   }
 
   min-height: 100vh;
-  background: radial-gradient(ellipse, rgba(var(--bg-gradient-home), 1) 0%, rgba(var(--bg-gradient-home), 0) 700%);
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--bg-gradient-home), 1) 0%,
+    rgba(var(--bg-gradient-home), 0) 700%
+  );
 }
-
 
 @media (min-width: 960px) {
   .VPDoc {
     padding: 32px 0 0 !important;
   }
-  
+
   .VPNavBar .content {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -75,7 +78,11 @@
   }
 
   min-height: 100vh;
-  background: radial-gradient(ellipse, rgba(var(--bg-gradient-home), 1) 0%, rgba(var(--bg-gradient-home), 0) 700%);
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--bg-gradient-home), 1) 0%,
+    rgba(var(--bg-gradient-home), 0) 700%
+  );
 }
 .VPNavBar .container {
   margin: unset;
@@ -88,3 +95,4 @@
   max-width: 100px !important;
   padding-left: 50px !important;
 }
+
