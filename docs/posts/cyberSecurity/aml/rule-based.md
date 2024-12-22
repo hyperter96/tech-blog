@@ -1,14 +1,17 @@
 ---
 sidebar: false
-cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/algorithm-1.jpeg 
+cover: https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/algorithm-1.jpeg
 date: 2024-12-17
 sticky: 1
 tags: 
   - 网络安全
   - AML
+next:
+  text: 'AML规则引擎架构设计'
+  link: '/posts/cyberSecurity/keda-rule-infra'
 ---
 
-# AML规则设计
+# AML规则探索
 
 AML规则引擎通过定义各种“规则”来监控交易，识别可疑活动，并触发相应的警报或调查。以下是一些关键的AML规则设计和策略，可用于检测常见的洗钱手段：
 

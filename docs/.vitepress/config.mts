@@ -48,7 +48,8 @@ export default defineConfig({
     },
     config:(md)=>{
       md.use(footnote_plugin)
-    }
+    },
+    math: true,
   },
   vite: { 
     ssr: { 
