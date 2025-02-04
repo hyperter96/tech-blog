@@ -8,6 +8,9 @@ tag:
   - 强化学习
   - Fine Tuning
 sticky: 1
+next:
+  link: '/posts/ai/lora-parameter'
+  text: 'LoRA微调的参数对训练模型的作用和影响'
 ---
 
 # 通过强化学习实现反馈优化层的自动 LoRA 微调
