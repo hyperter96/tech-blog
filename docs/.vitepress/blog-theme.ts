@@ -124,7 +124,8 @@ const blogTheme = getThemeConfig({
     closeTitle: '下次一定',
     content: '<img src="https://cdn.jsdelivr.net/gh/hyperter96/tech-blog/docs/assets/images/wechatpay-code.jpg">',
     icon: 'wechatPay'
-  }
+  },
+  mermaid: true,
 })
 
 export { blogTheme }

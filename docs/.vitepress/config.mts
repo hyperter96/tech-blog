@@ -2,15 +2,14 @@ import { defineConfig } from 'vitepress'
 import  footnote_plugin  from "markdown-it-footnote";
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
-
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
   lang: 'zh-CN',
-  title: '皮特ᴾᵗ的博客技术站',
-  description: '热衷于网络安全、云原生技术，一直为实现自我价值而执着！',
+  title: '皮特ᴾᵗ的博客充电栈',
+  description: '热衷于量子计算、AI以及云原生技术，一直为实现自我价值而执着！',
   base: "/", // 部署到github上时访问的根目录
   lastUpdated: true,
   transformPageData(pageData, ctx) {
