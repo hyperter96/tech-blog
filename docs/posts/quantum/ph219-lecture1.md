@@ -13,13 +13,13 @@ sticky: 1
 
 薛定谔宣称，不打开盒子，猫就处于生和死的“叠加态”，又称：“当我们打开盒子，经过了我们的观察，猫就会坍缩到一个确定的生、死状态上”。
 
-![]$https://quantum-book-by-originq.readthedocs.io/en/latest/_images/wps64.png$
+![](https://quantum-book-by-originq.readthedocs.io/en/latest/_images/wps64.png)
 
 什么叫做“观察”之后“坍缩”到确定的状态上？难道不是这个装置而是第一个看到猫的人决定了猫的生死吗？
 
 这里提出量子的第四个特性：“测量和坍缩假设”。测量和坍缩对量子态的影响仍然是一个争议话题，所以用了“假设”。这个特性的描述如下： 对于一个叠加态而言，可以去测量它，测量的结果一定是这一组量子化之后的、确定的、分立的态中的一个。测量得到任意的态的概率是这个叠加态和测量态的内积的平方，测量之后，叠加态就会坍缩到这个确定的态之上。
 
-简而言之，如果在一个微观粒子处在1楼和2楼叠加态的话，只能测出来它在1楼或者2楼，这个概率是由它们的叠加权重决定的，但是一旦对这个粒子进行测量，这个粒子的状态就会发生变化，不再是原来那个既在1楼又在2楼的叠加态，而是处在一个确定的状态（1楼或者2楼）。换句话说，测量影响了这个粒子本身的状态。   
+简而言之，如果在一个微观粒子处在1楼和2楼叠加态的话，只能测出来它在1楼或者2楼，这个概率是由它们的叠加权重决定的，但是一旦对这个粒子进行测量，这个粒子的状态就会发生变化，不再是原来那个既在1楼又在2楼的叠加态，而是处在一个确定的状态（1楼或者2楼）。换句话说，测量影响了这个粒子本身的状态。
 
 在上一节中，已经说明了叠加本身是一种客观存在的现象，那么测量、观察这种主观的事情是如何影响到客观叠加的呢？
 
@@ -132,7 +132,7 @@ $$
 
 $$
 \begin{align*}
-X|0\rangle &= 
+X|0\rangle &=
 \begin{bmatrix}
 0 & 1\\
 1 & 0
@@ -236,7 +236,6 @@ $$
 
 密度矩阵已经完备地表示了一个两能级系统可能出现的任何状态。为了更加直观地理解量子叠加态与逻辑门的作用，引入布洛赫球的概念，它能够方便地表示一个量子比特的任意状态。
 
-
 ![](https://quantum-book-by-originq.readthedocs.io/en/latest/_images/2.1.4.png)
 
 对于混合态而言，因为根据之前的描述，混合态实际上是多个纯态的经典统计概率的叠加。对于每一个纯态分量，连接球心和球面上的点，可以形成一个矢量。根据概率列表，对所有的纯态矢量进行加权平均，即可得到混合态的矢量，即得到了混合态对应的点。
@@ -248,25 +247,32 @@ $$
 ---
 
 ### **1. 观测量（Observable）**
+
 #### **定义**
+
 - **数学形式**：观测量是**厄米算符**（Hermitian Operator），记作 $\hat{O}$，满足 $\hat{O}^\dagger = \hat{O}$。
 - **物理意义**：它的本征值对应测量结果的**可能取值**，本征态对应测量后的**坍缩状态**。
 - **测量规则**：对量子态 $|\psi\rangle$ 测量 $\hat{O}$，结果为某个本征值 $o_i$，概率为 $|\langle \phi_i| \psi \rangle|^2$，其中 $|\phi_i\rangle$ 是 $\hat{O}$ 的本征态。
 
 #### **示例**
+
 考虑单量子比特的**泡利-Z算符** $\hat{O} = Z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$，其本征值为 $+1$ 和 $-1$，对应本征态为 $|0\rangle$ 和 $|1\rangle$。  
 若量子态为 $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$，则：
+
 - 测得 $+1$ 的概率为 $|\alpha|^2$，坍缩到 $|0\rangle$；
 - 测得 $-1$ 的概率为 $|\beta|^2$，坍缩到 $|1\rangle$。
 
 ---
 
 ### **2. 计算基下的测量**
+
 #### **定义**
+
 - **计算基**：量子比特的标准正交基，通常指 $|0\rangle = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ 和 $|1\rangle = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$。
 - **测量含义**：在计算基下的测量等价于对泡利-Z算符 $Z$ 的测量，结果对应比特值 $0$ 或 $1$，是量子计算中最常用的测量方式。
 
 #### **测量步骤**
+
 1. **量子态表示**：假设待测态为 $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$。
 2. **计算概率**：
    - 测得 $0$ 的概率为 $|\alpha|^2$，
@@ -276,8 +282,11 @@ $$
 ---
 
 ### **3. 实例分析**
+
 #### **例1：测量叠加态**
+
 设量子态为 $|\psi\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$：
+
 1. **计算基测量**：对 $Z$ 进行测量。
 2. **概率结果**：
    - 测得 $0$ 的概率 $|\frac{1}{\sqrt{2}}|^2 = \frac{1}{2}$，
@@ -285,30 +294,39 @@ $$
 3. **坍缩**：无论结果如何，测量后态必为 $|0\rangle$ 或 $|1\rangle$。
 
 #### **例2：测量非计算基态**
+
 若量子态为 $|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$（对应布洛赫球的X方向）：
+
 - **在计算基（Z方向）测量**：结果仍为 $0$ 或 $1$，各占50%概率。
 - **若在X基（测量 $\hat{X}$）**：结果将确定性地得到 $+1$（对应 $|+\rangle$ 本身）。
 
 ### **4. 关键区别与意义**
+
 - **观测量选择**：测量结果依赖于所选的厄米算符。例如：
   - 测量 $Z$（计算基）→ 获取比特信息；
   - 测量 $X$ 或 $Y$ → 获取量子态在X或Y方向的极化信息。
 - **计算基的普适性**：量子算法（如Shor算法、Grover算法）的最终结果通常以计算基读取，因此计算基测量是量子计算的核心操作。
 
 ## **布洛赫矢量与量子态的对应关系**
+
 单量子比特的任意纯态可表示为：
+
 $$
 \begin{equation*}
 |\psi\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + e^{i\phi}\sin\left(\frac{\theta}{2}\right)|1\rangle
 \end{equation*}
 $$
+
 其对应的布洛赫矢量坐标为：
+
 $$
 \begin{equation*}
 \mathbf{r} = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)
 \end{equation*}
 $$
+
 其中：
+
 - $\theta \in [0, \pi]$ 是极角（与Z轴的夹角）；
 - $\phi \in [0, 2\pi)$ 是方位角（在XY平面的投影方向）。
 
@@ -317,20 +335,26 @@ $$
 ## **X基态的定义**
 
 X基态是泡利-X算符（$X = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$）的本征态：
+
 - **$|+\rangle$**：本征值 $+1$，对应态 $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$；
 - **$|-\rangle$**：本征值 $-1$，对应态 $\frac{|0\rangle - |1\rangle}{\sqrt{2}}$。
 
 ---
 
 ## **计算X基态的布洛赫坐标**
+
 ### **步骤1：将X基态标准化为布洛赫参数形式**
+
 以 $|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$ 为例：
+
 $$
 \begin{equation*}
 |\psi\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle
 \end{equation*}
 $$
+
 对比一般形式 $|\psi\rangle = \cos\left(\frac{\theta}{2}\right)|0\rangle + e^{i\phi}\sin\left(\frac{\theta}{2}\right)|1\rangle$，可得：
+
 $$
 \begin{equation*}
 \cos\left(\frac{\theta}{2}\right) = \frac{1}{\sqrt{2}}, \quad e^{i\phi}\sin\left(\frac{\theta}{2}\right) = \frac{1}{\sqrt{2}}
@@ -338,6 +362,7 @@ $$
 $$
 
 ### **步骤2：求解 $\theta$ 和 $\phi$**
+
 1. **极角 $\theta$**：
    $$
    \begin{equation*}
@@ -352,37 +377,47 @@ $$
    $$
 
 ### **步骤3：代入布洛赫坐标公式**
+
 $$
 \begin{equation*}
 \mathbf{r} = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)
 \end{equation*}
 $$
+
 将 $\theta = \frac{\pi}{2}$ 和 $\phi = 0$ 代入：
+
 $$
 \begin{equation*}
 \mathbf{r} = \left( \sin\frac{\pi}{2}\cos0, \sin\frac{\pi}{2}\sin0, \cos\frac{\pi}{2} \right) = (1 \cdot 1, 1 \cdot 0, 0) = (1, 0, 0)
 \end{equation*}
 $$
+
 因此，$$|+\rangle$$ 对应布洛赫球上 **X轴右端点**（坐标为 $(1,0,0)$）。
 
 同理，对 $|-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}$，计算可得：
+
 $$
 \begin{equation*}
 \cos\left(\frac{\theta}{2}\right) = \frac{1}{\sqrt{2}}, \quad e^{i\phi}\sin\left(\frac{\theta}{2}\right) = -\frac{1}{\sqrt{2}} \implies \phi = \pi
 \end{equation*}
 $$
+
 此时：
+
 $$
 \begin{equation*}
 \mathbf{r} = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta) = (1 \cdot (-1), 1 \cdot 0, 0) = (-1, 0, 0)
 \end{equation*}
 $$
+
 对应 **X轴左端点**（坐标为 $(-1,0,0)$）。
 
 ---
 
 ### **步骤4: 验证：通过布洛赫矢量公式直接计算**
+
 对于任意量子态 $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$，其布洛赫矢量 $\mathbf{r} = (r_x, r_y, r_z)$ 可定义为：
+
 $$
 \begin{equation*}
 \begin{cases}
@@ -394,6 +429,7 @@ r_z = |\alpha|^2 - |\beta|^2
 $$
 
 #### **以 $|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ 为例**
+
 - $\alpha = \frac{1}{\sqrt{2}}$，$\beta = \frac{1}{\sqrt{2}}$
 - 计算分量：
   $$
@@ -403,18 +439,18 @@ $$
   r_z &= \left|\frac{1}{\sqrt{2}}\right|^2 - \left|\frac{1}{\sqrt{2}}\right|^2 = 0
   \end{align*}
   $$
-最终得到 $\mathbf{r} = (1, 0, 0)$，即X轴右端点。
+  最终得到 $\mathbf{r} = (1, 0, 0)$，即X轴右端点。
 
 ---
 
 ### **步骤5: 几何解释**
+
 - **X轴对应测量方向**：当沿X轴方向（水平向右）测量时：
   - 本征态 $|+\rangle$ 和 $|-\rangle$ 分别位于X轴的正负端点。
   - 它们的布洛赫矢量方向与X轴一致，因此测量X方向时结果确定（无坍缩）。
 - **与计算基（Z轴）的关系**：若对X基态进行Z方向（计算基）测量，量子态将坍缩到Z轴两极，体现出量子叠加态的随机性。
 
 ---
-
 
 通过以上计算可明确:
 **X基态在布洛赫球上的位置是通过量子态的数学表达与布洛赫矢量定义直接对应的**。理解这一过程是掌握量子态几何表示的关键。
