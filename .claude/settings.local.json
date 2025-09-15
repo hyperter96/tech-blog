@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/C:\\Users\\peter\\Go\\src\\github.com\\tech-blog/**)",
+      "Read(/C:\\Users\\peter\\Go\\src\\github.com\\tech-blog/**)",
+      "Read(/C:\\Users\\peter\\Go\\src\\github.com\\tech-blog\\docs/**)",
+      "Read(/C:\\Users\\peter\\Go\\src\\github.com\\tech-blog\\.github/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
